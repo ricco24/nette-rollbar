@@ -36,7 +36,7 @@ class RollbarLogger extends \Tracy\Logger
 	
 	/**
 	 * Wrapper for log function
-	 * @param string $message
+	 * @param array $message
 	 * @param string $priority
 	 * @return bool
 	 */

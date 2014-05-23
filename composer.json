@@ -1,0 +1,21 @@
+{
+    "name": "kelemen/nette-rollbar",
+    "description": "Rollbar logger for Tracy",
+    "license": "LGPL",
+    "keywords": ["rollbar","error","nette","logger"],
+    "authors": [
+        {
+            "name": "Samuel Kelemen",
+            "email": "kelemen.samuel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">= 5.3.7",
+		"tracy/tracy": "2.3.*@dev",
+        "rollbar/rollbar": "~0.8.1"
+    },
+    "autoload": {
+        "classmap": ["src/"] 
+    }
+}

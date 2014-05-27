@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">= 5.3.7",
-		"tracy/tracy": "2.3.*@dev",
+		"tracy/tracy": "v2.2.1",
         "rollbar/rollbar": "~0.8.1"
     },
     "autoload": {

@@ -13,7 +13,7 @@
     "require": {
         "php": ">= 5.3.7",
 		"tracy/tracy": "v2.2.1",
-        "rollbar/rollbar": "~0.8.1"
+        "rollbar/rollbar": "v0.9.3"
     },
     "autoload": {
         "classmap": ["src/"] 

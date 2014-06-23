@@ -23,7 +23,7 @@ use \Tracy\Debugger as TDebugger;
 class RollbarLogger extends \Tracy\Logger
 {		
 	/** @var boolean */
-	private $ignoreNotice;
+	private static $ignoreNotice;
 	
 	/**
 	 * Register logger to \Tracy\Debugger
@@ -31,7 +31,7 @@ class RollbarLogger extends \Tracy\Logger
 	 * @param boolean $ignoreNotice
 	 */
 	public static function register($config, $ignoreNotice = false) {	
-		$this->ignoreNotice = $ignoreNotice;
+		self::$ignoreNotice = $ignoreNotice;
 		
 		if($config['sendErrors']) {
 			unset($config['sendErrors']);
@@ -54,7 +54,7 @@ class RollbarLogger extends \Tracy\Logger
 	 * @return bool
 	 */
     public function log($message, $priority = NULL) {
-		if($this->ignoreNotice && (strpos($message, 'PHP Notice') !== false)) {
+		if(self::$ignoreNotice && (strpos($message, 'PHP Notice') !== false)) {
 			return true;
 		}
 		

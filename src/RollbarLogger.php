@@ -54,7 +54,7 @@ class RollbarLogger extends \Tracy\Logger
 	 * @return bool
 	 */
     public function log($message, $priority = NULL) {
-		if($this->ignoreNotice && (strpos($message, 'PHP Notice') != false)) {
+		if($this->ignoreNotice && (strpos($message, 'PHP Notice') !== false)) {
 			return true;
 		}
 		
